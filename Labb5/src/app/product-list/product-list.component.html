@@ -5,55 +5,60 @@
 <button type="button" (click)="category='Laptops'" style="margin-left: 10px">Laptops</button>
 <button type="button" (click)="category='Toys'" style="margin-left: 10px">Toys</button>
 <div *ngFor="let product of products; let i = index" [attr.data-index]="i">
-    <h3 *ngIf="category == product.category">
-        <a [title]="product.name + 'details'"
-        [routerLink]="['/products', product.id]">
-            {{product.name}}
-        </a>
-    </h3>
+    <div *ngIf="category == product.category">
+        <h3 *ngIf="category == product.category">
+            <a [title]="product.name + 'details'"
+            [routerLink]="['/products', product.id]">
+                {{product.name}}
+            </a>
+        </h3>
 
-    <p *ngIf="product.description && product.category == category">
-        Description: {{product.description}}
-    </p>
+        <p *ngIf="product.description && product.category == category">
+            Description: {{product.description}}
+        </p>
 
-    <p *ngIf="product.rating && product.category == category">
-        Rating: {{product.rating}}
-    </p>
+        <p *ngIf="product.rating && product.category == category">
+            Rating: {{product.rating}}
+        </p>
 
-    <p *ngIf="product.image && product.category == category">
-        <img src= {{product.image}} height="200px" alt="phone img">
-    </p>
+        <p *ngIf="product.image && product.category == category">
+            <img src= {{product.image}} height="200px" alt="phone img">
+        </p>
 
-    <p *ngIf="product.category == category">
-        Likes : {{product.likes}}
-        <button type="button" (click)="product.likes= product.likes + 1" style="margin-left: 20%">Give like</button>
-    </p>
+        <p *ngIf="product.category == category">
+            Likes : {{product.likes}}
+            <button type="button" (click)="product.likes= product.likes + 1" style="margin-left: 20%">Give like</button>
+        </p>
 
-    <p *ngIf="product.category && product.category == category">
-        Category : {{product.category}}
-    </p>
+        <p *ngIf="product.category && product.category == category">
+            Category : {{product.category}}
+        </p>
 
-    <button type="button" (click)="share()"
-    style="margin-bottom: 10px;"
-    *ngIf="category == product.category">
-        Share
-    </button>
-    <p *ngIf="category == product.category">
-        <a href={{product.link}} style="font-size: large;">Kaspi link</a>
-    </p>
-    <app-product-alerts
-        [product] = "product"
-        (notify)="onNotify()"
+        <button type="button" (click)="share()"
+        style="margin-bottom: 10px;"
         *ngIf="category == product.category">
-    
-    </app-product-alerts>
-    <span *ngIf="category == product.category">
-        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Share via Twitter</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </span>
-    <br>
-    <span *ngIf="product.category == category">
-        <a href="https://t.me/share/url?url={{product.link}}&text=hello&to={phone_number}">Telegram</a>
-    </span>
+            Share
+        </button>
+        <p *ngIf="category == product.category">
+            <a href={{product.link}} style="font-size: large;">Kaspi link</a>
+        </p>
+        <app-product-alerts
+            [product] = "product"
+            (notify)="onNotify()"
+            *ngIf="category == product.category">
+
+        </app-product-alerts>
+        <span *ngIf="category == product.category">
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Share via Twitter</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </span>
+        <br>
+        <span *ngIf="product.category == category">
+            <a href="https://t.me/share/url?url={{product.link}}&text=hello&to={phone_number}">Telegram</a>
+        </span>
+        <div>
+            <button type="button" (click)="Delete(i)">Delete</button>
+        </div>
+    </div>
 </div>
 
 <!-- 

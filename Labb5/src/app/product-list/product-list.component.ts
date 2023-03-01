@@ -19,6 +19,10 @@ export class ProductListComponent {
   onNotify(){
     window.alert("You will be notified when the product goes on sale")
   }
+
+  Delete(index: number){
+    products.splice(index, 1);
+  }
 }
 
 
