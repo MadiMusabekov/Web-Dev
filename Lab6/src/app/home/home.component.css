@@ -1,0 +1,13 @@
+.home-page{
+  width:80vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.home-page-title{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}

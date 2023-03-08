@@ -1,0 +1,27 @@
+<!--<h1>Post list</h1>-->
+
+<!--<ul>-->
+<!--  <li *ngFor="let post of posts">-->
+<!--    &lt;!&ndash;    <a routerLink="/posts/{{post.id}}">&ndash;&gt;-->
+<!--    &lt;!&ndash;      {{post.id}}) {{post.title}}&ndash;&gt;-->
+<!--    &lt;!&ndash;    </a>&ndash;&gt;-->
+<!--    <a [routerLink]="['/posts', post.id]">-->
+<!--      {{post.id}}) {{post.title}}-->
+<!--    </a>-->
+
+<!--  </li>-->
+<!--</ul>-->
+
+<div class="album-page">
+  <div class="album-page-title">
+    <h1>Album Page</h1>
+  </div>
+  <div>
+    <div class="album-page-item" *ngFor="let album of albums">
+      <a class="link" routerLink="{{album.id}}">
+        {{album.id}}-{{album.title}}
+      </a>
+      <button class="button-delete" (click)="handleDeleteAlbum(album)">X</button>
+    </div>
+  </div>
+</div>

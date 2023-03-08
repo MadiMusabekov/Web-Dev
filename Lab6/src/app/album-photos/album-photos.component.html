@@ -1,0 +1,15 @@
+<div class="album-photo-page">
+  <div class="album-photo-page-title">
+    <button class ="album-page-title-button" (click)="back()">Back</button>
+    <h1>Photos Page</h1>
+  </div>
+  <div>
+    <h2>{{album.title}}</h2>
+    <div>
+      <div class ="album-photo-page-photos" *ngFor="let photo of photos">
+        <img src ="{{photo.url}}" alt="" width="150" height="150px">
+        <h3>{{photo.title}}</h3>
+      </div>
+    </div>
+  </div>
+</div>

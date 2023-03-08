@@ -1,0 +1,25 @@
+<div class="detail-page">
+  <div class="detail-page-title">
+    <button class="detail-page-title-button" (click)="back()">Back</button>
+    <h1>Detail Page</h1>
+  </div>
+
+  <div class="detail-info">
+    <h2>{{album.title}}</h2>
+    <div class="detail-info-edit">
+      <h2>
+        <input [(ngModel)]="newTitle" type="Text"/>
+      </h2>
+
+      <div class="detail-info-buttons">
+        <button class="buttons-save" (click)="saveTitle()">Save</button>
+      </div>
+    </div>
+
+    <div class="detail-info-photos">
+      <h2>
+        <a class="link" routerLink="/albums/{{album.id}}/photos">Photos</a>
+      </h2>
+    </div>
+  </div>
+</div>

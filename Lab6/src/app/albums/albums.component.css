@@ -1,0 +1,19 @@
+.album-page{
+  width: 80vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.album-page-title{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+.album-page-item{
+  width: 500px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}

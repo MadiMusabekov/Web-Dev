@@ -1,0 +1,50 @@
+.detail-page{
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.detail-page-title{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+.detail-page-title-button{
+  /*position: absolute;*/
+  /*left: 25%;*/
+  margin-right: 50px;
+}
+.detail-info{
+  width: 100%;
+  height: 100%;
+  /*padding-top: 30px;*/
+  /*padding-left: 50px;*/
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+}
+.detail-info-edit{
+  padding-top: 10px;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: row;
+}
+.detail-info-buttons{
+  width:200px;
+}
+.buttons-save{
+  margin-top: 17px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+}
+.detail-info-photos{
+  padding-top:20px;
+}
+input{
+  padding: 10px;
+}
